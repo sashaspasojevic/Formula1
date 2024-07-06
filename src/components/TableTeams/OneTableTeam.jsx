@@ -18,7 +18,7 @@ const OneTableTeam = () => {
 
   const getTeamInfo = useCallback(() => {
     const formattedId = id.startsWith(":") ? id.slice(1) : id;
-    return axios.get(`http://ergast.com/api/f1/${selectedYear}/constructors/${formattedId}/constructorStandings.json`);
+    return axios.get(`https://ergast.com/api/f1/${selectedYear}/constructors/${formattedId}/constructorStandings.json`);
   }, [id, selectedYear]);
 
   useEffect(() => {
