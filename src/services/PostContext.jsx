@@ -13,7 +13,7 @@ const PostProvider = ({ children }) => {
 
   const getAllDrivers = useCallback(() => {
     return axios.get(
-      `http://ergast.com/api/f1/${selectedYear}/driverStandings.json`
+      `https://ergast.com/api/f1/${selectedYear}/driverStandings.json`
     );
   }, [selectedYear]);
 

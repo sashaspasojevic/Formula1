@@ -16,7 +16,7 @@ const Teams = () => {
 
   const getTeams = useCallback(() => {
     return axios.get(
-      `http://ergast.com/api/f1/${selectedYear}/constructorStandings.json`
+      `https://ergast.com/api/f1/${selectedYear}/constructorStandings.json`
     );
   }, [selectedYear]);
 

@@ -19,7 +19,7 @@ const OneDriver = () => {
   const getDriver = useCallback(() => {
     const formattedId = id.startsWith(":") ? id.slice(1) : id;
     return axios.get(
-      `http://ergast.com/api/f1/${selectedYear}/drivers/${formattedId}/driverStandings.json`
+      `https://ergast.com/api/f1/${selectedYear}/drivers/${formattedId}/driverStandings.json`
     );
   }, [id, selectedYear]);
 

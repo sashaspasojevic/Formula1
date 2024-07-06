@@ -14,7 +14,7 @@ const Races = () => {
   const [filteredRaces, setFilteredRaces] = useState([]);
 
   const getRaces = useCallback(() => {
-    return axios.get(`http://ergast.com/api/f1/${selectedYear}/results/1.json`);
+    return axios.get(`https://ergast.com/api/f1/${selectedYear}/results/1.json`);
   }, [selectedYear]);
 
   useEffect(() => {

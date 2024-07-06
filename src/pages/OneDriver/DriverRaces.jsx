@@ -11,7 +11,7 @@ const DriverRaces = ({ selectedYear, id, oneFlag }) => {
     const formattedId = id.startsWith(":") ? id.slice(1) : id;
 
     return axios.get(
-      `http://ergast.com/api/f1/${selectedYear}/drivers/${formattedId}/results.json`
+      `https://ergast.com/api/f1/${selectedYear}/drivers/${formattedId}/results.json`
     );
   }, [id, selectedYear]);
 
