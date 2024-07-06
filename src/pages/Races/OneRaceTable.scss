@@ -1,0 +1,140 @@
+@import "../../scss/var";
+@import "../../scss/mixins";
+
+.oneRace__info {
+  display: flex;
+  gap: 20px;
+  @include breakpoint(tablet) {
+    display: block;
+  }
+}
+
+.oneRace__info-profile {
+  flex: 0 0 20%;
+  margin-top: 30px;
+
+  @include breakpoint(tablet) {
+    padding-left: 10px;
+    width: 100%;
+  }
+
+  h3 {
+    color: $color1;
+  }
+
+  .oneRace__info-text {
+    .oneRace__info-flag {
+      text-align: left !important;
+
+      .flag {
+        display: inline-block !important;
+        margin-left: 0 !important;
+        padding: 0 !important;
+        width: 100px !important;
+        height: auto !important;
+      }
+    }
+
+    p {
+      color: $color1;
+      font-weight: 700;
+      font-size: 18px;
+    }
+  }
+}
+
+.oneRace__info-table {
+  color: $color1;
+  width: 100%;
+  border-bottom: 2px solid $color9;
+  margin-top: 50px;
+  
+  @include breakpoint(tablet) {
+    padding-left: 10px;
+    width: 100%;
+  }
+
+  th {
+    text-align: left;
+    padding: 5px 0;
+  }
+
+  .table_link {
+    width: 30px;
+  }
+}
+
+// table
+
+.oneRace__table {
+  background-color: $color3;
+  flex: 1 0 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include breakpoint(tablet) {
+    display: block;
+    width: 100%;
+  }
+  table {
+    border-collapse: collapse;
+    background-color: $color1;
+    @include breakpoint(tablet) {
+      width: 100%;
+    }
+  }
+  tr,
+  td,
+  th {
+    border: 1px solid $color9;
+  }
+
+  .oneRace__thead1 {
+    background-color: $color6;
+  }
+
+  .oneRace__thead2 {
+    background-color: $color5;
+  }
+
+  th {
+    padding: 10px 5px;
+    text-align: left;
+  }
+  td {
+    padding: 5px 0 5px 10px;
+
+    &:nth-child(2) {
+      border-right: none;
+    }
+
+    &:nth-child(3) {
+      border-left: none;
+    }
+    &:nth-child(6) {
+      &.points-1 {
+        background-color: $colorPosition1;
+      }
+
+      &.points-2 {
+        background-color: $colorPosition2;
+      }
+
+      &.points-3 {
+        background-color: $colorPosition3;
+      }
+
+      &.points-4-5 {
+        background-color: $colorPosition4_5;
+      }
+
+      &.points-6-10 {
+        background-color: $colorPosition6_10;
+      }
+
+      &.points-10-plus {
+        background-color: $colorPositionPlus;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../scss/var";
+@import "../Drivers/Drivers.scss";
+
+.races {
+  @extend .drivers;
+  td {
+    &:nth-child(6) {
+      border-right: none;
+    }
+
+    &:nth-child(7) {
+      border-left: none;
+    }
+  }
+
+  tr:nth-child(1) {
+    background-color: $color3;
+    font-weight: bold;
+  }
+
+  .circuit {
+    border-left: 1px solid $color9 !important;
+  }
+  .racesLink {
+    @extend .driverLink;
+  }
+}

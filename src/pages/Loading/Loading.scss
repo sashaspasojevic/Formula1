@@ -1,0 +1,12 @@
+@import '../../scss/var';
+
+
+.loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 69px);
+  .loadingImg {
+    width: 200px;
+  }
+}

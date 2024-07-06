@@ -1,0 +1,72 @@
+@import "../../scss/var";
+@import "../../scss/mixins";
+
+.oneDriver__info {
+  display: flex;
+  @include breakpoint(tablet){
+    display: block;
+  }
+}
+
+.oneDriver__info-profile {
+  flex: 0 0 20%;
+  display: flex;
+  gap: 5%;
+  margin-top: 30px;
+  @include breakpoint(tablet) {
+    padding-left: 10px;
+  }
+
+  .oneDriver__info-img {
+    flex: 0 0 40%;
+  }
+
+  .oneDriver__info-text {
+    .oneDriver__info-flag {
+      text-align: left !important;
+
+      .flag {
+        display: inline-block !important;
+        margin-left: 0 !important;
+        padding: 0 !important;
+        width: 35px !important;
+        height: auto !important;
+      }
+    }
+
+    p {
+      color: $color1;
+      font-weight: 700;
+      font-size: 18px;
+    }
+  }
+}
+
+.oneDriver__info-table {
+  color: $color1;
+  width: 100%;
+  border-bottom: 2px solid $color9;
+  margin-top: 50px;
+  @include breakpoint(tablet) {
+    padding-left: 10px;
+  }
+
+  th {
+    text-align: left;
+    padding: 5px 0;
+  }
+
+  .table_link {
+    width: 30px;
+  }
+}
+
+// table
+
+.oneDriver__table {
+  background-color: $color3;
+  flex: 0 0 80%;
+  @include breakpoint(tablet) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,21 @@
+
+
+/**************
+breakpoint
+**************/
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint== "phone" {
+    @media only screen and (min-width: 200px) and (max-width: 650px) {
+      @content; 
+    }
+  } @else if $breakpoint== "tablet" {
+    @media only screen and (min-width: 651px) and (max-width: 896px) {
+      @content;
+    }
+
+    @media only screen and (min-width: 200px) and (max-width: 650px) {
+      @content; 
+    }
+  }
+}

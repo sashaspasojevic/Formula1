@@ -1,0 +1,70 @@
+@import '../../scss/var';
+
+.teamTable {
+  width: 100%;
+
+  h3 {
+    padding: 10px;
+    background-color: $color6;
+  }
+
+  th {
+    background-color: $color5;
+    padding: 5px 0 5px 5px;
+  }
+
+  table,
+  td,
+  th {
+    border: 1px solid $color6;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      text-align: left;
+    }
+
+    td {
+      border: 1px solid #000;
+      padding: 5px 0 5px 5px;
+
+      &:nth-child(2) {
+        border-right: none;
+      }
+
+      &:nth-child(3) {
+        border-left: none;
+      }
+
+      &:nth-child(4), 
+      &:nth-child(5) {
+        &.position1 {
+          background-color: $colorPosition1;
+        }
+
+        &.position2 {
+          background-color: $colorPosition2;
+        }
+
+        &.position3 {
+          background-color: $colorPosition3;
+        }
+
+        &.position4-5 {
+          background-color: $colorPosition4_5;
+        }
+
+        &.position6-10 {
+          background-color: $colorPosition6_10;
+        }
+
+        &.position10-plus {
+          background-color: $colorPositionPlus;
+        }
+      }
+    }
+  }
+}

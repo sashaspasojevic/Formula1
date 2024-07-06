@@ -1,0 +1,165 @@
+@import "var";
+@import "mixins";
+
+// /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+// *{
+//         margin: 0;
+//         padding: 0;
+//         box-sizing: border-box;
+// }
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: $fontFamily;
+  background-color: $color7;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+// article>*+* {
+//         margin-top: 1em;
+// }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  @include breakpoint(phone) {
+    width: 90%;
+  }
+  @include breakpoint(phone) {
+    width: 95%;
+  }
+}
+
+.py {
+  padding: 60px 0 90px;
+
+  @media (max-width: 1300px) {
+    padding: 40px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 0;
+  }
+}
+
+.btn {
+  color: $color1;
+  border: 0;
+  outline: 0;
+  padding: 8px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  background: $color5;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  width: fit-content;
+  transition: $transition;
+  height: fit-content;
+
+  &:hover {
+    background-color: $color4;
+    color: $color3;
+  }
+
+  img {
+    width: 25px;
+  }
+}
+
+// .btn {
+//         display: inline-block;
+//         background-color: blue;
+//         color: white;
+//         border: 1px solid blue;
+//         font-size: 14px;
+//         text-transform: uppercase;
+//         letter-spacing: 2px;
+//         padding: 20px 30px;
+//         overflow: hidden;
+//         margin: 10px 0;
+//         border-radius: 3px;
+//         cursor: pointer;
+//         // transition: $transition;
+//         &:hover {
+//                 color: white;
+//                 background-color:orchid;
+//                 border: none;
+//         }
+// }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

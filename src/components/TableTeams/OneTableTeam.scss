@@ -1,0 +1,66 @@
+@import "../../scss/var";
+@import "../../pages/OneDriver/OneDriver.scss";
+@import '../../pages/OneDriver/DriverRaces';
+
+
+.oneTeam__info {
+  display: flex;
+  @include breakpoint(tablet) {
+    display: block;
+  }
+}
+
+.oneTeam__info-profile {
+
+@extend .oneDriver__info-profile;
+
+
+  .oneTeam__info-img {
+    flex: 0 0 40%;
+  }
+
+  .oneTeam__info-text {
+    .oneTeam__info-flag {
+      text-align: left !important;
+
+      .flag {
+        display: inline-block !important;
+        margin-left: 0 !important;
+        padding: 0 !important;
+        width: 35px !important;
+        height: auto !important;
+      }
+    }
+
+    p {
+      color: $color1;
+      font-weight: 700;
+      font-size: 18px;
+    }
+  }
+}
+
+.oneTeam__info-table {
+@extend .oneDriver__info-table;
+
+  th {
+    text-align: left;
+    padding: 5px 0;
+  }
+
+  .table_link {
+    width: 30px;
+    // @include breakpoint(tablet) {
+    //   width: fit-content;
+    // }
+  }
+  
+}
+
+// table
+
+.oneTeam__table {
+ @extend .oneDriver__table;
+}
+
+

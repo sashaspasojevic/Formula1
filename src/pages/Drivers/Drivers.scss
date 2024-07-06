@@ -1,0 +1,57 @@
+@import "../../scss/var";
+@import "../../scss/mixins";
+
+
+.drivers {
+  width: 100%;
+  background-color: $color5;
+  padding: 30px 0 0 20px;
+  
+  @include breakpoint(tablet) {
+    padding: 30px 0 0 0;
+
+  }
+
+
+
+  table {
+    border-collapse: collapse;
+    background-color: $color1;
+    width: 100%;
+    overflow-x: auto;
+    text-align: left;
+
+    th {
+      border: 1px solid #000;
+      border-color: $color4;
+      padding: 10px 0 10px 10px;
+      background-color: $color4;
+    }
+
+    tr {
+      border: 1px solid $color9;
+    }
+
+    td {
+      padding: 5px 0 5px 10px;
+      border: 1px solid $color9;
+      &:nth-child(2) {
+        border-right: none;
+      }
+      &:nth-child(3) {
+        border-left: none;
+      }
+    }
+    .driverLink {
+      text-decoration: underline;
+      text-decoration-color: $color7;
+      text-underline-offset: 5px;
+      color: $color6;
+      transition: $transition;
+      &:hover {
+        color: $color3;
+        text-decoration: none;
+      }
+    }
+  }
+}

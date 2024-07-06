@@ -1,0 +1,17 @@
+@import "../../scss/mixins";
+
+.home {
+  display: flex;
+  min-width: 100%;
+
+  .nav {
+    flex: 0 0 20%;
+  }
+  .content {
+    flex: 0 0 80%;
+  }
+
+  @include breakpoint(tablet) {
+    display: block;
+  }
+}

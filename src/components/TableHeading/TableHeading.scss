@@ -1,0 +1,15 @@
+@import "../../scss/var";
+@import "../../scss/mixins";
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+
+.h2 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 45px;
+  margin-bottom: 20px;
+  color: $color1;
+  @include breakpoint(tablet) {
+    text-align: center;
+  }
+}

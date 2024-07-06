@@ -1,0 +1,67 @@
+@import "../../scss/var";
+@import "../../scss/mixins";
+
+.racesTable {
+  width: 100%;
+
+  h3 {
+    padding: 10px;
+    background-color: $color6;
+  }
+
+  th {
+    background-color: $color5;
+    padding: 5px 0 5px 5px;
+  }
+
+  table,
+  td,
+  th {
+    border: 1px solid $color6;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      text-align: left;
+    }
+    td {
+      border: 1px solid #000;
+      padding: 5px 0 5px 5px;
+      &:nth-child(2) {
+        border-right: none;
+      }
+
+      &:nth-child(3) {
+        border-left: none;
+      }
+      &:nth-child(6) {
+        &.position-1 {
+          background-color: $colorPosition1;
+        }
+
+        &.position-2 {
+          background-color: $colorPosition2;
+        }
+
+        &.position-3 {
+          background-color: $colorPosition3;
+        }
+
+        &.position-4-5 {
+          background-color: $colorPosition4_5;
+        }
+
+        &.position-6-10 {
+          background-color: $colorPosition6_10;
+        }
+
+        &.position-10-plus {
+          background-color: $colorPositionPlus;
+        }
+      }
+    }
+  }
+}
