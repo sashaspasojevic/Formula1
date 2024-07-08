@@ -1,6 +1,6 @@
 The page is posted at:
 # formula1-pearl.vercel.app
-You can see Formula 1 results by years, by drivers, teams, tracks, as well as find basic information about them. The data was downloaded from the Ergast Api service.
+You can see Formula 1 results by year, by drivers, teams, and tracks, as well as find basic information about them. The data was downloaded from the Ergast API service.
 
 # React + Vite
 
