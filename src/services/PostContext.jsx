@@ -23,16 +23,37 @@ const PostProvider = ({ children }) => {
     );
   };
 
-  useEffect(() => {
-    setIsLoading(true);
-    getAllDrivers().then((res) => {
-      const drivers =
-        res.data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
-      setAllDrivers(drivers);
-      setFilteredDrivers(drivers);
+
+
+useEffect(() => {
+  setIsLoading(true);
+
+  const fetchDrivers = async (year) => {
+    try {
+      const res = await axios.get(
+        `https://ergast.com/api/f1/${year}/driverStandings.json`
+      );
+      const standingsList = res.data.MRData.StandingsTable.StandingsLists;
+      if (standingsList.length > 0) {
+        setAllDrivers(standingsList[0].DriverStandings);
+        setFilteredDrivers(standingsList[0].DriverStandings);
+        setSelectedYear(year); // Postavi na validnu godinu
+      } else if (year > 1950) { // API ima podatke od 1950. godine
+        fetchDrivers(year - 1); // Pokušaj sa prethodnom godinom
+      } else {
+        setAllDrivers([]);
+        setFilteredDrivers([]);
+      }
+    } catch (error) {
+      console.error("Error fetching driver standings:", error);
+    } finally {
       setIsLoading(false);
-    });
-  }, [getAllDrivers]);
+    }
+  };
+
+  fetchDrivers(selectedYear);
+}, [selectedYear]);
+
 
   useEffect(() => {
     getAllFlags().then((res) => {

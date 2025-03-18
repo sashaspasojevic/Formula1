@@ -116,7 +116,7 @@ const OneRaceTable = () => {
                       <th>Pos</th>
                       <th colSpan={2}>Driver</th>
                       <th>Team</th>
-                      <th>Best Time</th>
+                      <th>B. Time</th>
                     </tr>
                   </thead>
                   <tbody>
